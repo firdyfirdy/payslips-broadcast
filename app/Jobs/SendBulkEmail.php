@@ -77,7 +77,7 @@ class SendBulkEmail implements ShouldQueue
                     'employee_id' => $payslip->employee->id,
                     'email' => $payslip->employee->email,
                     'status' => 0,
-                    'message' => $e
+                    'message' => $e->getMessage()
                 ]);
             }
         }
