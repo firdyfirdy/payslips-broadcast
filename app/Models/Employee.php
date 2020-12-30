@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Employee extends Model
+{
+    use HasFactory;
+
+    protected $table = 'employees';
+    public $timestamps = true;
+
+    protected $fillable = [
+        'nik',
+        'nama',
+        'email',
+        'jabatan',
+        'departemen',
+        'created_at'
+    ];
+
+    public function paySlip()
+    {
+        return $this->hasMany('App\Models\PaySlip');
+    }
+}

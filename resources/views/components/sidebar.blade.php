@@ -24,6 +24,24 @@
                         <span>Profile</span>
                     </a>
                 </li>
+                <li class="{{ Route::is('employees.index') ? 'active' : '' }}">
+                    <a href="{{ route('employees.index') }}">
+                        <i class="fas fa-users"></i>
+                        <span>Employees</span>
+                    </a>
+                </li>
+                <li class="{{ Route::is('payslips.index') ? 'active' : '' }}">
+                    <a href="{{ route('payslips.index') }}">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Pay Slips</span>
+                    </a>
+                </li>
+                <li class="{{ Route::is('mailbroadcasts.index') ? 'active' : '' }}">
+                    <a href="{{ route('mailbroadcasts.index') }}">
+                        <i class="fas fa-mail-bulk"></i>
+                        <span>Broadcast</span>
+                    </a>
+                </li>
             </ul>
         </aside>
     </div>
