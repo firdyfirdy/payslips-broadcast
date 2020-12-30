@@ -14,7 +14,7 @@ class AddColumnMessageToMailBroadcastsTable extends Migration
     public function up()
     {
         Schema::table('mail_broadcasts', function (Blueprint $table) {
-            $table->string('message')->nullable();
+            $table->string('message')->after('status')->nullable();
         });
     }
 

@@ -76,7 +76,8 @@ class SendBulkEmail implements ShouldQueue
                 MailBroadcast::create([
                     'employee_id' => $payslip->employee->id,
                     'email' => $payslip->employee->email,
-                    'status' => 0
+                    'status' => 0,
+                    'message' => $e
                 ]);
             }
         }
